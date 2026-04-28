@@ -176,7 +176,9 @@ t = 1, 2, 3              # tuple packing
 a, b, c = t
 print(a, b, c)
 
-# extended unpacking
-x, *y = [1, 2, 3, 4]
-print(x)                 # 1
-print(y)                 # [2, 3, 4]
+# extended unpacking (* for remaining elements)
+t = (10, 20, 30, 40, 50, 60)
+x, *y, z = t
+print(x)  # first value
+print(y)  # middle values
+print(z)  # last value

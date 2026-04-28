@@ -98,13 +98,10 @@ print_info(name="Alice", age=25)
 # ==========================================================
 # ORDER OF ARGUMENTS
 # ==========================================================
-
 # correct order:
 # positional → default → *args → keyword-only → **kwargs
-
 def example(a, b=2, *args, c, d=5, **kwargs):
     print(a, b, args, c, d, kwargs)
-
 example(1, 3, 4, 5, c=10, x=100)
 
 
@@ -137,7 +134,8 @@ print(square.__doc__)
 # lambda arguments: expression
 
 add = lambda a, b: a + b
-print(add(3, 4))
+result = add(3, 4)
+print(result)
 
 # used in functions like map, filter
 nums = [1, 2, 3]
@@ -146,24 +144,21 @@ print(squares)
 
 
 # ==========================================================
-# PACKING ARGUMENTS
+# PACKING ARGUMENTS : normal variable -> list or tuple or dict
 # ==========================================================
 
 # *args → packs into tuple
 def func(*args):
     print(args)
-
-func(1, 2, 3)
+func(1, 2, 3)  #(1, 2, 3)
 
 # **kwargs → packs into dict
 def func2(**kwargs):
     print(kwargs)
-
-func2(a=1, b=2)
-
+func2(name="Asish", age=22) #{'name': 'Asish', 'age': 22}
 
 # ==========================================================
-# UNPACKING ARGUMENTS
+# UNPACKING ARGUMENTS : list or tuple or dict -> normal variable 
 # ==========================================================
 
 # unpack list using *
